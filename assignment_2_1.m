@@ -1,0 +1,25 @@
+%Generate 128 samples of three sinusoidal signals (A Sin(2?fnT +?)), say x1, x2 and x3 of frequency(f) 150Hz, 450Hz and 1500Hz respectively. Take the amplitude (A) to be 1, phase (?) to be 0 and the sampling frequency (1/T) to be 8KHz. Now plot all the three signals in one row.
+fs = 8000;
+x1 = 150;
+x2 = 450;
+x3 = 1500;
+N = 128;
+t = 0 : 1/fs : N/fs;
+signal1 = sin(2*pi*x1*t);
+subplot(1,3,1);
+plot(signal1);
+title('signal_1 with frequency 150Hz');
+xlabel('time');
+ylabel('Ampitude');
+signal2 = sin(2*pi*x2*t);
+subplot(1,3,2);
+plot(signal2);
+title('signal_2 with frequency 450Hz');
+xlabel('time');
+ylabel('Ampitude');
+signal3 = sin(2*pi*x3*t);
+subplot(1,3,3);
+plot(signal3);
+title('signal_3 with frequency 1500Hz');
+xlabel('time');
+ylabel('Ampitude');

@@ -1,0 +1,27 @@
+%Add x1 and x2 to generate 'xadd'
+fs = 8000;
+x1 = 150;
+x2 = 450;
+x3 = 1500;
+N = 128;
+t = 0 : 1/fs : N/fs;
+signal1 = sin(2*pi*x1*t);
+subplot(1,3,1);
+plot(signal1);
+title('signal_1 with frequency 150Hz');
+xlabel('time');
+ylabel('Ampitude');
+signal2 = sin(2*pi*x2*t);
+subplot(1,3,2);
+plot(signal2);
+title('signal_2 with frequency 450Hz');
+xlabel('time');
+ylabel('Ampitude');
+signal3 = sin(2*pi*x3*t);
+subplot(1,3,3);
+signal = signal1 + signal2;
+subplot(1,3,3);
+plot(signal);
+title('addition of signals');
+xlabel('time');
+ylabel('Aplitude');
